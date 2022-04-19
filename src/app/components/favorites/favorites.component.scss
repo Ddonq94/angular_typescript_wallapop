@@ -1,0 +1,22 @@
+.cardWrapper {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.noFav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image {
+  background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+  .cardWrapper {
+    grid-template-columns: 1fr;
+  }
+}

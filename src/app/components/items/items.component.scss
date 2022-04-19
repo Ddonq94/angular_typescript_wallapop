@@ -1,0 +1,25 @@
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-column-description {
+  width: 50vw;
+}
+
+img {
+  width: 5vw;
+  height: 5vw;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 10px 10px 0 0;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}

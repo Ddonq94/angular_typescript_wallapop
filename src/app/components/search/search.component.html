@@ -1,0 +1,10 @@
+<mat-form-field appearance="legacy">
+  <mat-label>{{ title }}</mat-label>
+  <input
+    matInput
+    placeholder="Start typing to filter"
+    #search
+    (keyup)="onKeyUp(search.value)"
+  />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

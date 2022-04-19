@@ -1,0 +1,38 @@
+<div class="header">
+  <h2 mat-dialog-title>Hi, see your Favs here</h2>
+  <app-search
+    [title]="'Search through your favorites'"
+    (search)="search($event)"
+  ></app-search>
+</div>
+<div mat-dialog-content *ngIf="items.length; else noFavs">
+  <div class="cardWrapper">
+    <mat-card *ngFor="let item of items">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          [style.background-image]="'url(' + item.image + ')'"
+          class="header-image"
+        ></div>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>Interesting item</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" [alt]="item.title" />
+
+      <mat-card-actions>
+        <app-favorite [item]="item"></app-favorite>
+        Remove from favorites
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onClose()">Close</button>
+</div>
+
+<ng-template #noFavs>
+  <div class="noFav">
+    <h4 mat-dialog-title>No favorites match your search value</h4>
+  </div>
+</ng-template>

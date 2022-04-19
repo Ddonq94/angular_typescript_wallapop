@@ -1,0 +1,8 @@
+<button
+  *ngIf="item"
+  mat-icon-button
+  [color]="inFavorites(item) ? 'warn' : 'disabled'"
+  (click)="toggleFavorites(item)"
+>
+  <mat-icon>favorite</mat-icon>
+</button>
